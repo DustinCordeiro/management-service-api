@@ -2,8 +2,10 @@ const Sequelize = require("sequelize");
 const dbConfig = require("../config/database");
 const connection = new Sequelize(dbConfig);
 
-import Profile from "../models/Profile";
+const Profile =  require("../models/Profile");
+const Users =  require("../models/Users");
 
 Profile.init(connection);
+Users.init(connection);
 
 module.exports = connection;

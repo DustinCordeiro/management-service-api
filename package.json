@@ -6,10 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon --inspect app.js",
-    "create-db": "npm sequelize db:create",
-    "create-migration": "npm sequelize migration:create --name=create-table-test",
-    "run-migration": "npm sequelize db:migrate",
-    "rollback-migration": "npm sequelize db:undo"
+    "create-db": "yarn sequelize db:create",
+    "create-migration": "yarn sequelize migration:create --name=create-table",
+    "run-migration": "yarn sequelize db:migrate",
+    "rollback-migration": "yarn sequelize db:migrate:undo"
   },
   "keywords": [],
   "author": "",
