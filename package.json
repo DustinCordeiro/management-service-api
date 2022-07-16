@@ -5,7 +5,11 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --inspect app.js"
+    "start": "nodemon --inspect app.js",
+    "create-db": "npm sequelize db:create",
+    "create-migration": "npm sequelize migration:create --name=create-table-test",
+    "run-migration": "npm sequelize db:migrate",
+    "rollback-migration": "npm sequelize db:undo"
   },
   "keywords": [],
   "author": "",
@@ -13,7 +17,11 @@
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.3",
+    "sequelize-cli": "^6.4.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
