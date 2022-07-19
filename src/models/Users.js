@@ -6,7 +6,7 @@ class Users extends Model {
       {
         name: DataTypes.STRING,
         email: DataTypes.STRING,
-        pass: DataTypes.TEXT,
+        password: DataTypes.TEXT,
         profile_id: DataTypes.BIGINT,
         disabled_at: DataTypes.DATE,
       },
@@ -21,4 +21,6 @@ class Users extends Model {
   }
 }
 
-module.exports = Profile;
+module.exports = {
+  Users,
+};

@@ -17,7 +17,7 @@ module.exports = {
         alowNull: false,
         unique: true,
       },
-      pass: {
+      password: {
         type: Sequelize.TEXT,
         alowNull: false,
       },
