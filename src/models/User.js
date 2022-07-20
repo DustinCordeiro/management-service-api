@@ -16,11 +16,11 @@ class Users extends Model {
         tableName: "users",
         timestamps: true,
         underscored: false,
+        createdAt: "created_at",
+        updatedAt: "updated_at",
       }
     );
   }
 }
 
-module.exports = {
-  Users,
-};
+module.exports = Users;

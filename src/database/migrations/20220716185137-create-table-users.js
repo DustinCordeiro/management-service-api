@@ -25,7 +25,7 @@ module.exports = {
         type: Sequelize.BIGINT,
         alowNull: false,
       },
-      create_at: {
+      created_at: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("NOW"),
       },

@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING,
         alowNull: false,
       },
-      create_at: {
+      created_at: {
         type: Sequelize.DATE,
         defaultValue: Sequelize.fn("NOW"),
       },

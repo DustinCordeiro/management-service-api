@@ -12,6 +12,8 @@ class Profile extends Model {
         tableName: "profiles",
         timestamps: true,
         underscored: false,
+        createdAt: "created_at",
+        updatedAt: "updated_at",
       }
     );
   }
