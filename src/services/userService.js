@@ -1,6 +1,7 @@
 const User = require("../models/User");
 const { UnauthorizedError } = require("../erros/typeErros");
 const tokenGenerate = require("../utils/tokenGenerate");
+const { use } = require("../../routes");
 
 async function userValidate(email, password) {
   email = email.toString().toLowerCase();
@@ -12,8 +13,16 @@ async function userValidate(email, password) {
     throw new UnauthorizedError(401, "User or password invalids");
   }
 
-  let credential = "";
+  let credential = _createCredential(user);
 
+  return credential;
+}
+
+function _createCredential(user) {
+  let token = tokenGenerate.createToken(user);
+  user.password = undefined;
+
+  let credential = { token, user };
   return credential;
 }
 

@@ -9,6 +9,7 @@ class UserController {
         throw new UnauthorizedError(401, "User or password invalids");
       }
       let credential = await userService.userValidate(email, password)
+      return res.json(credential);
     } catch (e) {
       console.log(e)
     }

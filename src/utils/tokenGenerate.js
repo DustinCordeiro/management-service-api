@@ -22,4 +22,6 @@ function expirationDate(){
 
 module.exports = {
   generatePasswordHash,
+  createToken,
+  expirationDate
 };
